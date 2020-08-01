@@ -6,9 +6,9 @@ COPY . .
 
 RUN CGO_ENABLE=0 GOOS=linux go build -ldflags="-s -w" src/main.go
 
-RUN pwd
-RUN ls -la
-RUN ls -la src
+#RUN pwd
+#RUN ls -la
+#RUN ls -la src
 
 #FROM scratch
 #
