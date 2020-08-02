@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-conf
+data:
+  nginx.conf: |
+    server {
+      listen 80;
+      index index.php index.html;
+      root /usr/share/nginx/html;
+
+      rewrite ^/google$ http://google.com permanent;
+    }
+
+  index.html: |
+    <html>
+      <head>
+        <title>Abner Serafim Arede - Code.education Rocks!</title>
+      </head>
+      <body>
+        <b>Code.education Rocks!</b>
+        <br /><br />
+        <b>Abner Serafim Arede</b>
+      </body>
+    </html>
